@@ -5,6 +5,14 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "apps/nx-pnpm-error/dist",
+        "webpackConfig": "apps/nx-pnpm-error/webpack.config.js"
+      }
+    },
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
